@@ -44,6 +44,14 @@ public class OperacionServlet extends HttpServlet {
             out.println("</html>");
         }
     }
+    
+     protected void verSumar(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+         request.setAttribute("num1", 0);
+         request.setAttribute("num2", 0);
+         request.setAttribute("result", 0);
+        request.getRequestDispatcher("Sumar.jsp").forward(request, response);
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -57,7 +65,8 @@ public class OperacionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       // processRequest(request, response);
+          verSumar(request, response);
     }
 
     /**

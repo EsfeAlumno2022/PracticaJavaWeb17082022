@@ -17,10 +17,10 @@
             <input type="text" name="num1" value="<%=request.getAttribute("num1")%>">
             <br>
             <label>Numero 2</label>
-            <input type="text" name="num2" value="<%=request.getAttribute("num1")%>">
+            <input type="text" name="num2" value="<%=request.getAttribute("num2")%>">
             <br>
             <label>Resultado</label>
-            <input type="text" value="<%=request.getAttribute("resul")%>" readonly="false">
+            <input type="text" value="<%=request.getAttribute("result")%>" readonly="false">
             <br>
             <input type="submit" value="Sumar">
         </form>
