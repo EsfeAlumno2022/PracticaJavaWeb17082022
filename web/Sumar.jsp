@@ -14,13 +14,13 @@
     <body>
          <form method="get">
             <label>Numero 1</label>
-            <input type="text" name="num1" value="<%=request.getParameter("num1")%>">
+            <input type="text" name="num1" value="<%=request.getAttribute("num1")%>">
             <br>
             <label>Numero 2</label>
-            <input type="text" name="num2" value="<%=request.getParameter("num1")%>">
+            <input type="text" name="num2" value="<%=request.getAttribute("num1")%>">
             <br>
             <label>Resultado</label>
-            <input type="text" value="<%=request.getParameter("resul")%>" readonly="false">
+            <input type="text" value="<%=request.getAttribute("resul")%>" readonly="false">
             <br>
             <input type="submit" value="Sumar">
         </form>
