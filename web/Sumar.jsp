@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-         <form method="get">
+         <form method="post">
             <label>Numero 1</label>
             <input type="text" name="num1" value="<%=request.getAttribute("num1")%>">
             <br>

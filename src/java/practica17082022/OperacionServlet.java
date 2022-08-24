@@ -52,6 +52,24 @@ public class OperacionServlet extends HttpServlet {
          request.setAttribute("result", 0);
         request.getRequestDispatcher("Sumar.jsp").forward(request, response);
     }
+      protected void sumar(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+            String num1= request.getParameter("num1");
+            String num2= request.getParameter("num2");
+            int num1Ent=0;
+            int num2Ent=0;
+            if(num1!=null){
+                num1Ent =Integer.parseInt(num1);
+            }
+            if(num2!=null){
+                num2Ent =Integer.parseInt(num2);
+            }
+         int result=num1Ent+num2Ent;
+         request.setAttribute("num1", num1);
+         request.setAttribute("num2", num2);
+         request.setAttribute("result",result);
+        request.getRequestDispatcher("Sumar.jsp").forward(request, response);
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -80,7 +98,8 @@ public class OperacionServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       // processRequest(request, response);
+       sumar(request, response);
     }
 
     /**
